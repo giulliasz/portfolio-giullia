@@ -29,8 +29,15 @@ body{background:#F3F1EC}
 [data-page="Main"] .cap{font-size:11px;line-height:1.4;letter-spacing:0.06em;text-transform:uppercase;font-weight:500}
 [data-page="Main"] .nav a:hover{opacity:.55}
 [data-page="Main"] .tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+[data-page="Main"] .tri a{display:block}
+[data-page="Main"] .tri .ph{aspect-ratio:3 / 2;overflow:hidden;background:#EFEFEF}
+[data-page="Main"] .more{display:inline-flex;align-items:center;gap:10px;margin-top:clamp(22px,2.6vw,36px)}
+[data-page="Main"] .more:hover{opacity:.55}
+[data-page="Main"] .more .ar{display:inline-block;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:none}50%{transform:translateY(4px)}}
+[data-page="Main"] .tri .lb{display:flex;justify-content:space-between;gap:12px;margin-top:10px}
 [data-page="Main"] .tri img{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-[data-page="Main"] .tri div:hover img{transform:scale(1.03)}
+[data-page="Main"] .tri a:hover img{transform:scale(1.03)}
 [data-page="Main"] .row{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(120px,auto);align-items:center;gap:24px;padding:0 20px;min-height:84px;border-top:1px solid #E6E6E6;transition:background .25s,color .25s}
 [data-page="Main"] .row .th{display:flex;gap:6px;opacity:0;transform:translateX(12px);transition:opacity .25s,transform .25s}
 [data-page="Main"] .row .th img{width:58px;height:58px;object-fit:cover;display:block}
@@ -49,8 +56,12 @@ body{background:#F3F1EC}
 [data-page="Main"] .row{grid-template-columns:minmax(0,1fr) auto;padding:14px 16px;gap:10px 16px}
 [data-page="Main"] .row .th{grid-column:1 / -1;opacity:1;transform:none;order:3}
 [data-page="Main"] .row .cat{text-align:right}
-[data-page="Main"] .tri{grid-template-columns:repeat(2,minmax(0,1fr))}
-[data-page="Main"] .tri div:first-child{grid-column:1 / -1;aspect-ratio:4 / 5 !important}
+[data-page="Main"] .tri{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+[data-page="Main"] .tri .ph{aspect-ratio:4 / 5}
+[data-page="Main"] .tri .lb{font-size:10px}
+[data-page="Main"] .tri .lb .muted{display:none}
+[data-page="Main"] .tri .lb{flex-direction:column;gap:2px}
+[data-page="Main"] .tri .lb .muted{text-align:left !important}
 [data-page="Main"] .sub2{display:none !important}
 
 }
@@ -424,19 +435,21 @@ body{background:#F3F1EC}
 </div>
 <div class="tri in" style="margin-top: clamp(18px, 2.4vw, 32px); animation-delay: .3s">
 
-<div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF">
-<img src="assets/dab1e8d867b35c0b32fc6a32d4702a8f.jpg" alt="Giullia de camisa azul, gravata preta e óculos escuros" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 40% 30%">
-</div>
+<a href="#Case-Tsai">
+<div class="ph"><img src="assets/0408cb2ddfdac6ad6ecfc06a8d4dea19.jpg" alt="Cartões de visita da Tsai Doceria sobre espelho" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 40% 50%"></div>
+<div class="lb cap"><span>Tsai Doceria</span><span class="muted" style="text-align: right">Rebranding</span></div>
+</a>
+<a href="#Case-Kuara">
+<div class="ph"><img src="assets/e0a1bb309ea346cbadfaa239b02a89b7.jpg" alt="Logo da Kuará sobre fundo verde" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%"></div>
+<div class="lb cap"><span>Kuará</span><span class="muted" style="text-align: right">Lançamento</span></div>
+</a>
+<a href="#Case-Sole">
+<div class="ph"><img src="assets/cc0a919fea7bf8125dd1496746784eec.jpg" alt="Post editorial da Sole Experience" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%"></div>
+<div class="lb cap"><span>Sole Experience</span><span class="muted" style="text-align: right">Redes sociais</span></div>
+</a>
 
-<div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF">
-<img src="assets/876612c8e42a2fa28cc99dcf5995e07c.jpg" alt="Giullia no mirante com vista para a serra" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%">
 </div>
-
-<div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF">
-<img src="assets/cf1a1eefedc9f644828b9e203cfa5b11.jpg" alt="Giullia atravessando a faixa de boné azul" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 35% 40%">
-</div>
-
-</div>
+<a href="#trabalhos" class="more mono in" style="animation-delay: .4s"><span class="ar">↓</span>Role para ver todos os trabalhos</a>
 </section>
 
 <section id="trabalhos" style="padding: clamp(72px, 9vw, 140px) 0 0">
@@ -594,25 +607,21 @@ body{background:#F3F1EC}
 <div class="mono muted">( Sobre )</div>
 <h2 style="margin: 14px 0 0; max-width: 1100px; font-weight: 500; font-size: clamp(34px, 5vw, 80px); line-height: 0.95; letter-spacing: -0.045em; text-transform: uppercase">Se tem imagem envolvida, provavelmente eu quero tentar.</h2>
 <div class="split" style="margin-top: clamp(32px, 4vw, 56px)">
+<div>
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
-
-<div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF"><img src="assets/e6cdc50123e02e3fd3ec8ecdd2ac2861.jpg" alt="Selfie de Giullia com óculos branco" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 57% 40%"></div>
-
+<div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF"><img src="assets/dab1e8d867b35c0b32fc6a32d4702a8f.jpg" alt="Giullia de camisa azul e gravata preta" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 40% 30%"></div>
 <div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF"><img src="assets/c50b8263f8a9e115ad1f873fbd86a300.jpg" alt="Giullia descendo a escada diante da janela" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 45% 55%"></div>
-
 <div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF"><img src="assets/9edcdce30bfe914c6deb0fd622bffb9d.jpg" alt="Estrutura de vigas de madeira contra o céu" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%"></div>
-
 <div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF"><img src="assets/dfb868c18ad3ebcab6d362f3e76ba602.jpg" alt="Estantes de livros vistas de cima" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%"></div>
-
 <div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF"><img src="assets/68dc41efc23cf39ab180638b3f8eec56.jpg" alt="Giullia no gramado ao sol" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 52% 60%"></div>
-
-<div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF"><img src="assets/ca09fc501a9609688171e7da60fb2344.jpg" alt="Giullia na serra, de jaqueta de couro" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%"></div>
-
+<div style="aspect-ratio: 3 / 4; overflow: hidden; background: #EFEFEF"><img src="assets/876612c8e42a2fa28cc99dcf5995e07c.jpg" alt="Giullia no mirante com vista para a serra" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 75%"></div>
+</div>
+<div class="mono muted" style="margin-top: 12px">( Referências: editoriais, moda, cinema, rua e viagens )</div>
 </div>
 <div>
 <div class="cap">Oi, eu sou a Giullia, designer gráfica.</div>
 <p style="margin: 16px 0 0; max-width: 520px; font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6">Comecei no design na Sole Experience, há quase três anos, e aprendi na prática: clientes reais, prazos reais, problemas reais. Hoje complemento essa bagagem com o técnico em Computação Gráfica.</p>
-<p style="margin: 14px 0 0; max-width: 520px; font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6">Gosto de entender a essência de cada projeto antes de abrir qualquer arquivo. Meu repertório vem de editoriais, moda, cinema, rua e viagens. E não paro no layout: moda, fotografia, vídeo e até sites.</p>
+<p style="margin: 14px 0 0; max-width: 520px; font-size: clamp(15px, 1.2vw, 17px); line-height: 1.6">Gosto de entender a essência de cada projeto antes de abrir qualquer arquivo. Meu repertório vem de editoriais, moda, cinema, rua e viagens. E não paro no layout: fotografia, vídeo e até sites.</p>
 <a href="https://wa.me/5534992024948?text=Oi%2C%20Giullia!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="cap" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; padding: 12px 18px; border: 1px solid #111111; border-radius: 999px">CONHEÇA MELHOR MEU TRABALHO 📞</a>
 <div style="margin-top: clamp(28px, 3vw, 40px); max-width: 520px">
 <div class="mono muted" style="margin-bottom: 6px">Trajetória ------------------</div>
@@ -663,9 +672,7 @@ body{background:#F3F1EC}
 <div><div class="cap muted">Para</div><div style="margin-top: 4px">Novo projeto, parceria, ou só um oi mesmo.</div></div>
 </div>
 </div>
-<div style="margin-top: clamp(40px, 5vw, 72px); aspect-ratio: 21 / 8; overflow: hidden; background: #EFEFEF">
-<img src="assets/876612c8e42a2fa28cc99dcf5995e07c.jpg" alt="Giullia no mirante com vista para a serra" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%">
-</div>
+<div style="margin-top: clamp(40px, 5vw, 72px); border-top: 1px solid #E6E6E6"></div>
 <div class="mono muted" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 20px 0 28px">
 <span>Giullia Oliveira ©2026</span>
 <span>Patos de Minas, MG</span>
